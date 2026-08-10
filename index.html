@@ -2,358 +2,1129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Reddys Youth Association – Guvvalegi Official Website</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RYA | Reddys Youth Association · Guvvalegi</title>
+
+<meta name="description" content="Reddys Youth Association, Guvvalegi — United by heritage, powered by youth.">
+
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;background:#f5eee3;color:#201817}
-.header{
-position:fixed;top:0;left:0;right:0;z-index:100;
-height:74px;padding:0 6%;
-display:flex;align-items:center;justify-content:space-between;
-background:rgba(10,8,8,.88);backdrop-filter:blur(12px);
-border-bottom:1px solid #72501c
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-.logo{color:#e4bd67;font:700 25px Georgia;text-decoration:none}
-.logo small{display:block;color:#ddd;font:9px Arial;letter-spacing:2px;margin-top:3px}
-nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:12px}
-nav a:hover{color:#e4bd67}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5efe3;
+  color:#241316;
+  overflow-x:hidden;
+}
+
+:root{
+  --maroon:#3b0b12;
+  --dark:#17090b;
+  --deep:#25080d;
+  --gold:#d6a84f;
+  --light-gold:#f0d58a;
+  --cream:#f5efe3;
+  --white:#fffaf2;
+  --text:#49363a;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(23,9,11,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(214,168,79,.35);
+}
+
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  min-height:78px;
+  padding:12px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:var(--gold);
+  text-decoration:none;
+  font-family:Georgia,serif;
+  font-size:32px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.logo small{
+  display:block;
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  letter-spacing:2.5px;
+  color:#eee;
+  margin-top:2px;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+/* ================= HERO ================= */
 
 .hero{
-height:90vh;min-height:620px;position:relative;
-display:flex;align-items:center;padding:0 8%;
-background:
-linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),
-linear-gradient(135deg,#321013,#12090a);
-overflow:hidden
+  min-height:100vh;
+  padding:150px 7% 90px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(28,6,10,.78),rgba(28,6,10,.9)),
+    url("https://wbtbgejtmahcuvkcyvef.supabase.co/storage/v1/object/public/rya-media/photos/7CC3BE77-57CA-4364-B320-594209666ABC.png")
+    center/cover no-repeat;
 }
-.hero:after{
-content:"GUVVALEGI";
-position:absolute;right:-40px;bottom:-40px;
-font:700 180px Georgia;color:rgba(255,255,255,.035)
+
+.hero-content{
+  max-width:800px;
+  color:white;
 }
-.hero-content{position:relative;z-index:2;color:white;max-width:720px}
-.eyebrow{font-size:11px;letter-spacing:3px;color:#e4bd67;font-weight:bold}
-h1{font:700 clamp(48px,7vw,88px)/.94 Georgia;margin:20px 0}
-h1 span{color:#e4bd67}
-.location{font:700 22px Georgia;letter-spacing:9px}
-.hero p{line-height:1.8;color:#ddd;max-width:580px}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:4px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(48px,7vw,88px);
+  line-height:.98;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:650px;
+  color:#eee;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
 .btn{
-display:inline-block;margin-top:20px;padding:14px 22px;
-background:linear-gradient(135deg,#b77c21,#f0d47e);
-color:#1a1005;text-decoration:none;font-weight:bold;border-radius:5px
-}
-.outline{
-display:inline-block;margin:20px 0 0 10px;padding:13px 20px;
-border:1px solid #ddd;color:white;text-decoration:none;border-radius:5px
+  display:inline-block;
+  padding:15px 26px;
+  border-radius:4px;
+  text-decoration:none;
+  font-weight:bold;
+  letter-spacing:1px;
+  transition:.3s;
 }
 
-.values{
-display:grid;grid-template-columns:repeat(5,1fr);
-background:#0c0909;color:white
+.btn-primary{
+  background:var(--gold);
+  color:#241316;
 }
-.values div{text-align:center;padding:25px 10px;border-right:1px solid #332820}
-.values b{display:block;color:#e4bd67;font:700 12px Georgia;letter-spacing:2px}
-.values small{display:block;color:#aaa;margin-top:7px}
 
-section{padding:90px 8%}
-.section-title{font:700 clamp(35px,5vw,58px) Georgia;margin:15px 0 25px}
-.section-title span{color:#8e151e}
-.lead{max-width:850px;color:#70675f;line-height:1.9}
+.btn-primary:hover{
+  background:#f0d58a;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border:1px solid var(--gold);
+  color:white;
+}
+
+.btn-outline:hover{
+  background:var(--gold);
+  color:#241316;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+  padding:100px 7%;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+}
+
+.section-label{
+  color:#9b681e;
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.section-title{
+  font-family:Georgia,serif;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.1;
+  margin-bottom:25px;
+  color:var(--maroon);
+}
+
+.section-title span{
+  color:#a87320;
+}
+
+.lead{
+  color:var(--text);
+  line-height:1.8;
+  font-size:17px;
+  max-width:750px;
+}
+
+/* ================= OUR STORY ================= */
+
+.story{
+  background:var(--cream);
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.story-card{
+  background:var(--maroon);
+  color:white;
+  padding:50px;
+  border-radius:4px;
+  position:relative;
+  box-shadow:0 20px 50px rgba(59,11,18,.18);
+}
+
+.story-card:before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(214,168,79,.4);
+  pointer-events:none;
+}
+
+.story-card h3{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+.story-card p{
+  color:#eee;
+  line-height:1.8;
+}
+
+/* ================= MISSION ================= */
+
+.mission{
+  background:white;
+}
 
 .cards{
-display:grid;grid-template-columns:repeat(3,1fr);
-gap:20px;margin-top:45px
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
-.card{
-background:white;padding:30px;border-radius:12px;
-border:1px solid #dfd1bc
-}
-.card h3{font:700 22px Georgia;color:#8e151e}
-.card p{color:#71675f;line-height:1.7}
 
-.dark{
-background:linear-gradient(135deg,#11090a,#300e13);
-color:white
+.card{
+  padding:32px 25px;
+  border:1px solid #e0d4c4;
+  background:#fffdf9;
+  transition:.3s;
 }
-.dark .lead{color:#c9bfba}
-.dark .card{
-background:rgba(255,255,255,.05);
-border-color:rgba(228,189,103,.2)
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+  box-shadow:0 15px 35px rgba(50,20,20,.1);
 }
-.dark .card h3{color:#e4bd67}
-.dark .card p{color:#c6bbb4}
+
+.card-icon{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  color:var(--maroon);
+  font-size:23px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#6b575a;
+  line-height:1.7;
+}
+
+/* ================= WHAT WE DO ================= */
+
+.what-we-do{
+  background:linear-gradient(135deg,#25080d,#4a0d17);
+  color:white;
+}
+
+.what-we-do .section-title{
+  color:white;
+}
+
+.what-we-do .lead{
+  color:#ddd;
+}
+
+.activities{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.activity{
+  padding:30px;
+  border:1px solid rgba(214,168,79,.3);
+  background:rgba(255,255,255,.04);
+}
+
+.activity h3{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.activity p{
+  color:#ddd;
+  line-height:1.7;
+}
+
+/* ================= HERITAGE ================= */
+
+.heritage{
+  background:#f5efe3;
+}
+
+.heritage-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.heritage-photo{
+  min-height:420px;
+  background:
+    linear-gradient(rgba(30,5,8,.25),rgba(30,5,8,.4)),
+    url("https://wbtbgejtmahcuvkcyvef.supabase.co/storage/v1/object/public/rya-media/photos/7CC3BE77-57CA-4364-B320-594209666ABC.png")
+    center/cover no-repeat;
+  border-radius:5px;
+  box-shadow:0 20px 50px rgba(50,15,15,.2);
+}
+
+/* ================= EVENTS ================= */
+
+.events{
+  background:white;
+}
+
+.events-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
 
 .event{
-display:flex;align-items:center;gap:25px;
-background:white;padding:28px;border-radius:12px;
-border:1px solid #dfd1bc
-}
-.event-date{
-background:#78121b;color:#e4bd67;
-padding:20px;text-align:center;font:700 20px Georgia
+  border:1px solid #e3d7ca;
+  padding:30px;
+  background:#fffdf9;
 }
 
-.gallery-grid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px
+.event-date{
+  display:inline-block;
+  padding:8px 12px;
+  background:var(--maroon);
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:20px;
 }
-.gallery-box{
-height:260px;border-radius:10px;
-background:linear-gradient(145deg,#321013,#12090a);
-display:flex;flex-direction:column;
-align-items:center;justify-content:center;
-color:white;border:1px dashed #a7792d
+
+.event h3{
+  font-family:Georgia,serif;
+  color:var(--maroon);
+  font-size:24px;
+  margin-bottom:12px;
 }
-  .gallery-box img{
+
+.event p{
+  color:#6b575a;
+  line-height:1.7;
+}
+
+/* ================= MEMORIES ================= */
+
+.memories{
+  background:#21090d;
+  color:white;
+}
+
+.memories .section-title{
+  color:white;
+}
+
+.memories .lead{
+  color:#ddd;
+}
+
+.memory-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+}
+
+.memory-main{
+  min-height:430px;
+  border:1px solid rgba(214,168,79,.45);
+  background:#321014;
+  overflow:hidden;
+}
+
+.memory-main img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  min-height:430px;
+  object-fit:cover;
   display:block;
 }
-.gallery-box strong{font:700 30px Georgia;color:#e4bd67}
-.gallery-box span{margin-top:10px}
+
+.memory-side{
+  display:grid;
+  gap:20px;
+}
+
+.memory-box{
+  min-height:205px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(214,168,79,.35);
+  background:linear-gradient(145deg,#3b0b12,#1a0709);
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:22px;
+  text-align:center;
+  padding:20px;
+}
+
+/* ================= YOUTH ================= */
+
+.youth{
+  background:var(--cream);
+}
+
+.youth-box{
+  background:linear-gradient(135deg,#3b0b12,#75121e);
+  padding:70px;
+  color:white;
+  text-align:center;
+  border-radius:5px;
+}
+
+.youth-box .section-title{
+  color:white;
+  max-width:800px;
+  margin:0 auto 20px;
+}
+
+.youth-box p{
+  max-width:750px;
+  margin:0 auto 30px;
+  color:#eee;
+  line-height:1.8;
+}
+
+/* ================= JOIN ================= */
 
 .join{
-background:linear-gradient(110deg,#45080e,#821620);
-color:white;display:flex;align-items:center;
-justify-content:space-between;gap:30px
+  background:white;
+  text-align:center;
 }
-.join h2{font:700 45px Georgia}
-.join p{color:#ddd;line-height:1.7}
 
-.contact-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:50px
+.join .section-title{
+  max-width:800px;
+  margin:0 auto 20px;
 }
-input,textarea{
-width:100%;padding:14px;margin-bottom:12px;
-border:1px solid #d6c8b2;border-radius:6px;font:inherit
+
+.join p{
+  max-width:700px;
+  margin:0 auto 30px;
+  color:#665457;
+  line-height:1.8;
 }
-button{border:0;cursor:pointer}
+
+/* ================= FOOTER ================= */
 
 footer{
-background:#080707;color:#aaa;padding:30px 8%;
-display:flex;justify-content:space-between;flex-wrap:wrap
-}
-footer b{color:#e4bd67}
-
-@media(max-width:800px){
-nav{display:none}
-.hero{padding:0 6%}
-.cards,.gallery-grid,.contact-grid{grid-template-columns:1fr}
-.values{grid-template-columns:repeat(2,1fr)}
-.join{display:block}
-.join h2{font-size:36px}
-.outline{margin-left:0}
-  *{
-  max-width:100%;
+  background:#120608;
+  color:#aaa;
+  padding:55px 7% 25px;
 }
 
-.gallery-grid{
-  grid-template-columns:1fr;
-  width:100%;
+.footer-inner{
+  max-width:1150px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+  padding-bottom:35px;
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.gallery-box{
-  width:100%;
-  height:auto;
-  min-height:260px;
+.footer-logo{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:35px;
+  font-weight:bold;
 }
 
-.gallery-box img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  display:block;
+.footer-text{
+  max-width:400px;
+  line-height:1.7;
+  margin-top:10px;
 }
+
+.footer-links{
+  display:flex;
+  gap:20px;
 }
+
+.footer-links a{
+  color:#ccc;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+.copyright{
+  text-align:center;
+  padding-top:25px;
+  font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .header-inner{
+    padding:12px 20px;
+  }
+
+  section{
+    padding:75px 6%;
+  }
+
+  .hero{
+    padding:140px 6% 80px;
+    min-height:90vh;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .story-grid,
+  .heritage-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .activities{
+    grid-template-columns:1fr;
+  }
+
+  .events-grid{
+    grid-template-columns:1fr;
+  }
+
+  .memory-grid{
+    grid-template-columns:1fr;
+  }
+
+  .memory-side{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .youth-box{
+    padding:45px 25px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .logo{
+    font-size:27px;
+  }
+
+  .logo small{
+    font-size:7px;
+    letter-spacing:1.8px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    text-align:center;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .story-card{
+    padding:35px 25px;
+  }
+
+  .memory-side{
+    grid-template-columns:1fr;
+  }
+
+  .memory-main,
+  .memory-main img{
+    min-height:260px;
+  }
+
+  .heritage-photo{
+    min-height:280px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+
+  .footer-links{
+    flex-wrap:wrap;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header class="header">
-<a class="logo" href="#">RYA
-<small>REDDYS YOUTH ASSOCIATION · GUVVALEGI</small>
-</a>
+<!-- ================= HEADER ================= -->
 
-<nav>
-<a href="#about">ABOUT</a>
-<a href="#community">COMMUNITY</a>
-<a href="#events">EVENTS</a>
-<a href="#gallery">GALLERY</a>
-<a href="#youth">YOUTH</a>
-<a href="#contact">CONTACT</a>
-</nav>
+<header>
+  <div class="header-inner">
+
+    <a href="#home" class="logo">
+      RYA
+      <small>REDDYS YOUTH ASSOCIATION · GUVVALEGI</small>
+    </a>
+
+    <nav>
+      <a href="#story">OUR STORY</a>
+      <a href="#mission">MISSION</a>
+      <a href="#activities">ACTIVITIES</a>
+      <a href="#heritage">HERITAGE</a>
+      <a href="#memories">MEMORIES</a>
+      <a href="#join">JOIN RYA</a>
+    </nav>
+
+  </div>
 </header>
 
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
-<div class="hero-content">
-<div class="eyebrow">UNITED BY HERITAGE · DRIVEN BY YOUTH</div>
 
-<h1>Reddys Youth<br><span>Association</span></h1>
+  <div class="hero-content">
 
-<div class="location">GUVVALEGI</div>
+    <div class="eyebrow">
+      REDDYS YOUTH ASSOCIATION · GUVVALEGI
+    </div>
 
-<p>
-A community built on unity, service, opportunity and pride in our roots.
-Together we connect people, empower young minds and build a stronger future.
-</p>
+    <h1>
+      United by <span>Heritage.</span><br>
+      Powered by Youth.
+    </h1>
 
-<a class="btn" href="#about">DISCOVER RYA</a>
-<a class="outline" href="#gallery">OUR MEMORIES</a>
-</div>
-</section>
+    <p>
+      Building a stronger community by bringing together young people,
+      preserving our heritage, encouraging service and creating opportunities
+      for the future of Guvvalegi.
+    </p>
 
-<div class="values">
-<div><b>UNITY</b><small>We stand together</small></div>
-<div><b>SERVICE</b><small>We serve our community</small></div>
-<div><b>LEADERSHIP</b><small>We lead by example</small></div>
-<div><b>GROWTH</b><small>We grow together</small></div>
-<div><b>HERITAGE</b><small>We honor our roots</small></div>
-</div>
+    <div class="buttons">
+      <a href="#story" class="btn btn-primary">OUR STORY</a>
+      <a href="#join" class="btn btn-outline">JOIN RYA</a>
+    </div>
 
-<section id="about">
-<div class="eyebrow">OUR ASSOCIATION</div>
-<h2 class="section-title">Rooted in <span>Guvvalegi</span>.<br>Driven by Youth.</h2>
-
-<p class="lead">
-Reddys Youth Association is a community platform created to connect people,
-empower young minds, celebrate our heritage and create meaningful opportunities
-for the future.
-</p>
-
-<div class="cards">
-<div class="card">
-<h3>Connect</h3>
-<p>Bring members together through events, networking and community conversations.</p>
-</div>
-
-<div class="card">
-<h3>Empower</h3>
-<p>Support education, careers, mentorship and entrepreneurship for the next generation.</p>
-</div>
-
-<div class="card">
-<h3>Serve</h3>
-<p>Turn collective energy into meaningful service and village development.</p>
-</div>
-</div>
-</section>
-
-<section class="dark" id="community">
-<div class="eyebrow">OUR COMMUNITY</div>
-<h2 class="section-title">One Community.<br><span>Many Possibilities.</span></h2>
-
-<div class="cards">
-<div class="card"><h3>Education</h3><p>Scholarships, mentoring and academic support.</p></div>
-<div class="card"><h3>Careers</h3><p>Jobs, internships and professional connections.</p></div>
-<div class="card"><h3>Entrepreneurship</h3><p>Young founders, businesses and ideas.</p></div>
-<div class="card"><h3>Community Service</h3><p>Volunteer programs and development initiatives.</p></div>
-<div class="card"><h3>Youth Activities</h3><p>Sports, cultural programs and workshops.</p></div>
-<div class="card"><h3>Heritage</h3><p>Our village, our memories and our identity.</p></div>
-</div>
-</section>
-
-<section id="events">
-<div class="eyebrow">COMMUNITY CALENDAR</div>
-<h2 class="section-title">Events & <span>Activities</span></h2>
-
-<div class="event">
-<div class="event-date">RYA<br><small>2026</small></div>
-<div>
-<h3>Upcoming RYA Events</h3>
-<p class="lead">
-Meetings, youth programs, celebrations, service activities and community events
-will appear here.
-</p>
-</div>
-</div>
-</section>
-
-<section id="gallery">
-<div class="eyebrow">OUR MEMORIES</div>
-<h2 class="section-title">Photos & <span>Videos</span></h2>
-
-<p class="lead">
-Our growing archive of RYA events, celebrations, community service activities
-and Guvvalegi memories.
-</p>
-
-<div class="gallery-grid">
-
-  <div class="gallery-box">
-    <img src="https://wbtbgejtmahcuvkcyvef.supabase.co/storage/v1/object/public/rya-media/photos/7CC3BE77-57CA-4364-B320-594209666ABC.png" alt="RYA Memory">
   </div>
 
-  <div class="gallery-box">
-    <span>ADD VIDEOS</span>
-  </div>
+</section>
 
-  <div class="gallery-box">
-    <span>MORE MEMORIES</span>
-  </div>
 
-</div>
+<!-- ================= OUR STORY ================= -->
+
+<section class="story" id="story">
+
+  <div class="container story-grid">
+
+    <div>
+
+      <div class="section-label">OUR STORY</div>
+
+      <h2 class="section-title">
+        Every community begins with <span>people who care.</span>
+      </h2>
+
+      <p class="lead">
+        Reddys Youth Association is a platform created to bring together
+        the youth of Guvvalegi and create a stronger sense of community,
+        responsibility and belonging.
+      </p>
+
+      <br>
+
+      <p class="lead">
+        From community service and youth activities to cultural celebrations
+        and opportunities for young leaders, RYA aims to create a space where
+        people can connect, contribute and grow together.
+      </p>
+
+    </div>
+
+    <div class="story-card">
+
+      <h3>Our Vision</h3>
+
+      <p>
+        To build a united and empowered community where young people take
+        initiative, support one another and contribute meaningfully to the
+        future of Guvvalegi.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
-<section class="dark" id="youth">
-<div class="eyebrow">YOUTH POWER</div>
-<h2 class="section-title">Connect. Grow. <span>Lead.</span></h2>
 
-<p class="lead">
-We want to create a platform where students, professionals, entrepreneurs
-and young leaders can connect, share opportunities and contribute to the
-future of Guvvalegi.
-</p>
+<!-- ================= MISSION ================= -->
+
+<section class="mission" id="mission">
+
+  <div class="container">
+
+    <div class="section-label">WHAT DRIVES US</div>
+
+    <h2 class="section-title">
+      Our <span>Mission</span>
+    </h2>
+
+    <p class="lead">
+      RYA is built around four simple values that guide our work.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Community</h3>
+        <p>
+          Bringing people together and building stronger relationships
+          within our community.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>Youth</h3>
+        <p>
+          Encouraging young people to participate, lead and create positive
+          change.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏛️</div>
+        <h3>Heritage</h3>
+        <p>
+          Respecting our roots, traditions, memories and the identity of
+          Guvvalegi.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">❤️</div>
+        <h3>Service</h3>
+        <p>
+          Supporting meaningful initiatives that benefit people and the
+          community.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- ================= ACTIVITIES ================= -->
+
+<section class="what-we-do" id="activities">
+
+  <div class="container">
+
+    <div class="section-label">WHAT WE DO</div>
+
+    <h2 class="section-title">
+      Turning ideas into <span>action.</span>
+    </h2>
+
+    <p class="lead">
+      RYA brings together students, professionals, entrepreneurs and young
+      leaders to connect, share opportunities and contribute to the future
+      of Guvvalegi.
+    </p>
+
+    <div class="activities">
+
+      <div class="activity">
+        <h3>Community Service</h3>
+        <p>
+          Supporting initiatives that create a positive impact in the
+          community and helping people who need support.
+        </p>
+      </div>
+
+      <div class="activity">
+        <h3>Youth Activities</h3>
+        <p>
+          Creating opportunities for young people to participate,
+          collaborate and develop leadership.
+        </p>
+      </div>
+
+      <div class="activity">
+        <h3>Cultural Events</h3>
+        <p>
+          Celebrating traditions, festivals and the cultural identity that
+          connects our community.
+        </p>
+      </div>
+
+      <div class="activity">
+        <h3>Future Opportunities</h3>
+        <p>
+          Connecting young people with ideas, opportunities and people who
+          can help them grow.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HERITAGE ================= -->
+
+<section class="heritage" id="heritage">
+
+  <div class="container heritage-grid">
+
+    <div class="heritage-photo"></div>
+
+    <div>
+
+      <div class="section-label">OUR ROOTS</div>
+
+      <h2 class="section-title">
+        Guvvalegi is more than a <span>place.</span>
+      </h2>
+
+      <p class="lead">
+        It is our memories, our people, our traditions and the stories
+        passed from one generation to another.
+      </p>
+
+      <br>
+
+      <p class="lead">
+        RYA aims to help preserve that connection while giving the next
+        generation a platform to participate and shape the future.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+
+<section class="events">
+
+  <div class="container">
+
+    <div class="section-label">COMMUNITY CALENDAR</div>
+
+    <h2 class="section-title">
+      Events & <span>Activities</span>
+    </h2>
+
+    <p class="lead">
+      Meetings, youth programs, celebrations, service activities and
+      community events will appear here.
+    </p>
+
+    <div class="events-grid">
+
+      <div class="event">
+        <div class="event-date">UPCOMING</div>
+        <h3>RYA Meetings</h3>
+        <p>
+          Community discussions, planning and opportunities for members
+          to contribute.
+        </p>
+      </div>
+
+      <div class="event">
+        <div class="event-date">YOUTH</div>
+        <h3>Youth Programs</h3>
+        <p>
+          Activities designed to encourage participation, leadership and
+          collaboration.
+        </p>
+      </div>
+
+      <div class="event">
+        <div class="event-date">COMMUNITY</div>
+        <h3>Service Activities</h3>
+        <p>
+          Initiatives focused on supporting people and creating a stronger
+          community.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MEMORIES ================= -->
+
+<section class="memories" id="memories">
+
+  <div class="container">
+
+    <div class="section-label">OUR MEMORIES</div>
+
+    <h2 class="section-title">
+      Moments that tell our <span>story.</span>
+    </h2>
+
+    <p class="lead">
+      Our growing archive of RYA events, celebrations, community service
+      activities and Guvvalegi memories.
+    </p>
+
+    <div class="memory-grid">
+
+      <div class="memory-main">
+
+        <img
+          src="https://wbtbgejtmahcuvkcyvef.supabase.co/storage/v1/object/public/rya-media/photos/7CC3BE77-57CA-4364-B320-594209666ABC.png"
+          alt="RYA Reddys Youth Association Guvvalegi"
+        >
+
+      </div>
+
+      <div class="memory-side">
+
+        <div class="memory-box">
+          More<br>Memories
+        </div>
+
+        <div class="memory-box">
+          Videos<br>Coming Soon
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= YOUTH POWER ================= -->
+
+<section class="youth">
+
+  <div class="container">
+
+    <div class="youth-box">
+
+      <div class="section-label">YOUTH POWER</div>
+
+      <h2 class="section-title">
+        Connect. Grow. <span>Lead.</span>
+      </h2>
+
+      <p>
+        We want to create a platform where students, professionals,
+        entrepreneurs and young leaders can connect, share opportunities
+        and contribute to the future of Guvvalegi.
+      </p>
+
+      <a href="#join" class="btn btn-primary">
+        BECOME PART OF RYA
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= JOIN ================= -->
 
 <section class="join" id="join">
-<div>
-<div class="eyebrow">BECOME PART OF RYA</div>
-<h2>Let's build something meaningful together.</h2>
-<p>
-Students, professionals, entrepreneurs, volunteers and community members
-can all have a place here.
-</p>
-</div>
 
-<a class="btn" href="#contact">JOIN RYA</a>
+  <div class="container">
+
+    <div class="section-label">BECOME PART OF RYA</div>
+
+    <h2 class="section-title">
+      Your community. Your voice. <span>Your future.</span>
+    </h2>
+
+    <p>
+      RYA is for people who believe that a stronger community begins with
+      participation. Join us, contribute your ideas and be part of something
+      meaningful.
+    </p>
+
+    <a href="#" class="btn btn-primary">
+      JOIN RYA
+    </a>
+
+  </div>
+
 </section>
 
-<section id="contact">
-<div class="eyebrow">GET IN TOUCH</div>
-<h2 class="section-title">Connect with <span>RYA</span></h2>
 
-<div class="contact-grid">
-<div>
-<h3>Reddys Youth Association</h3>
-<h3>Guvvalegi</h3>
-<p class="lead">
-Official contact details, social media links and membership registration
-will be added here.
-</p>
-</div>
-
-<form onsubmit="event.preventDefault();alert('Thank you for contacting RYA!')">
-<input placeholder="Your Name" required>
-<input type="email" placeholder="Email Address" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
-<button class="btn">SEND MESSAGE</button>
-</form>
-</div>
-</section>
+<!-- ================= FOOTER ================= -->
 
 <footer>
-<div><b>RYA</b> · REDDYS YOUTH ASSOCIATION · GUVVALEGI</div>
-<div>United by Heritage · Driven by Youth · Building Our Future</div>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">RYA</div>
+
+      <div class="footer-text">
+        Reddys Youth Association · Guvvalegi
+        <br>
+        United by heritage. Powered by youth.
+      </div>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#story">Our Story</a>
+      <a href="#activities">Activities</a>
+      <a href="#heritage">Heritage</a>
+      <a href="#memories">Memories</a>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Reddys Youth Association · Guvvalegi. All Rights Reserved.
+  </div>
+
 </footer>
 
-<script src="script.js"></script>
-
-</body>
-</html>
 </body>
 </html>
