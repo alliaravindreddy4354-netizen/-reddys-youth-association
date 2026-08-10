@@ -363,3 +363,34 @@ footer b {
         height: auto;
     }
 }
+/* MOBILE WIDTH FIX */
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about,
+    .about > div {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .about .cards,
+    .about .values,
+    .about .story-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+}
