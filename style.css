@@ -492,3 +492,150 @@ footer b {
         max-width: 100%;
     }
 }
+/* =========================================
+   RYA FINAL MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Headings */
+    h1,
+    h2,
+    h3,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .section-title {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .lead {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* About */
+    .about {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about .values,
+    .about .cards,
+    .about .story-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Story */
+    .story-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Values */
+    .values {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Cards */
+    .cards {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Community */
+    .community-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Events */
+    .event {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .event-date {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Story poster */
+    .story-poster-full {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .story-poster-full img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Buttons */
+    .btn,
+    .btn-outline,
+    .outline {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
