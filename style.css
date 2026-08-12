@@ -394,3 +394,101 @@ footer b {
         max-width: 100%;
     }
 }
+/* ================================
+   RYA MOBILE RESPONSIVE FIX
+   ================================ */
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Make every major section use the complete phone width */
+    section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* FIX TWO-COLUMN SECTIONS */
+    .about {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fix cards */
+    .cards {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fix gallery */
+    .gallery-grid {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fix contact */
+    .contact-grid {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fix values section */
+    .values {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Story poster */
+    .story-poster-full {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .story-poster-full img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Prevent text from creating horizontal overflow */
+    h1,
+    h2,
+    h3,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    .btn,
+    .outline {
+        max-width: 100%;
+    }
+}
